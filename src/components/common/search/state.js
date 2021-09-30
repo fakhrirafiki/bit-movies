@@ -27,6 +27,7 @@ function useSearchState() {
 
     const onClickEnter = (e) => {
         if (e.charCode === 13) {
+            dispatch(resetMoviesData([]));
             dispatch(setSearchParams({ s: searchParams.s.trim() }));
             setDisplay(false);
         }
