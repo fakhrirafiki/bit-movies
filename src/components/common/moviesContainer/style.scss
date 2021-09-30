@@ -1,19 +1,35 @@
 .movies {
-  display: grid;
-  align-items: center;
-  justify-content: center;
-  grid-template-columns: repeat(3, 320px);
-  background-color: rgba(238, 238, 238, 0.508);
-  padding: 30px;
+  background-color: #f0f2f5;
+  padding: 30px 10px 100px;
+  min-height: 70vh;
+
+  &__container {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(3, 320px);
+  }
 
   &__pane {
     display: flex;
     width: 300px;
-    // height: auto;
-    // background: #000;
     display: flex;
     margin: 10px;
-    border: 1px solid #000;
+    position: relative;
+    max-width: 100%;
+    margin: 10px;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    border-radius: max(0% + 0px, min(0% + 8px, -999900% + 1.53185e7px)) / 8px;
+    box-shadow: rgb(0 0 0 / 5%) 0px 2px 2px;
+  }
+
+  &__nothing {
+    text-align: center;
+    margin: auto;
+    font-size: 28px;
+    font-weight: 100;
+    padding-top: 100px;
   }
 
   &__img {
@@ -24,5 +40,10 @@
 
   &__detail {
     margin-left: 10px;
+  }
+
+  &__title {
+    color: black;
+    text-decoration: none;
   }
 }

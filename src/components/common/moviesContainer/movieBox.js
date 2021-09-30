@@ -10,11 +10,12 @@ const MovieBox = React.forwardRef(({ movie, onClickImage }, ref) => {
                 data={movie.Poster}
                 onClick={onClickImage}
             />
-
             <div className="movies__detail">
                 <p className="movies__type">{movie.Type}</p>
                 <Link to={`/${movie.imdbID}`}>
-                    <h3 className="movies__title">{movie.Title}</h3>
+                    <h3 className="movies__title">
+                        {movie.Title.length > 30 ? `${movie.Title.substring(0, 28)}...` : movie.Title}
+                    </h3>
                 </Link>
                 <p className="movies__year">{movie.Year}</p>
             </div>

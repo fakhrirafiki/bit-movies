@@ -11,30 +11,31 @@ function Search() {
         updateInputByAuto,
         autoCompliteList,
         onChange,
-        display
+        display,
+        onClickEnter
     } = useSearchState();
 
     return (
         <div className="search">
             <img className="search__logo" src={logo} alt="logo" />
             <div className="search__inputContent">
-                <input value={searchParams.s} onChange={onChange} className="search__input" />
+                <input value={searchParams.s} onChange={onChange} onKeyPress={onClickEnter} className="search__input" />
                 <div className="search__icon">
                     <FaSearch />
                 </div>
                 {display && (
-                    <div className="autoContainer">
+                    <div className="search__autoContainer">
                         {autoCompliteList
                             .map((value, i) => {
                                 return (
                                     <div
                                         onClick={() => updateInputByAuto(value.Title)}
-                                        className="option"
+                                        className="search__autoCompliteList"
                                         key={i}
                                         tabIndex="0"
                                     >
                                         <span>{value.Title}</span>
-                                        <img src={value.Poster} alt="pokemon" />
+                                        <img className="search__autoCompliteImage" src={value.Poster} alt="movie" />
                                     </div>
                                 );
                             })}

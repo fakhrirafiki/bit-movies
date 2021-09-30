@@ -5,9 +5,7 @@ function Homepage() {
     return (
         <div >
             <Search />
-            <div className="movies">
-                <MoviesContainer />
-            </div>
+            <MoviesContainer />
         </div>
     );
 }

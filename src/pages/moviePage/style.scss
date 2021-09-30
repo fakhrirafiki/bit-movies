@@ -1,0 +1,74 @@
+.MoviePage {
+  background-color: #f0f2f5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 50px;
+
+  &__logo {
+    // height: 300px;
+    width: 300px;
+  }
+
+  &__pane {
+    width: 90%;
+    width: 900px;
+    min-height: 30vh;
+    display: flex;
+    align-items: flex-start;
+    background: #fff;
+    border-radius: max(0% + 0px, min(0% + 8px, -999900% + 1.53185e7px)) / 8px;
+    box-shadow: rgb(0 0 0 / 5%) 0px 2px 2px;
+    padding: 10px;
+  }
+
+  &__back {
+    width: 90%;
+    width: 900px;
+    margin-bottom: 30px;
+
+    span {
+      color: black;
+      background: #fff;
+      padding: 10px 30px 10px;
+      border-radius: 1000px;
+      box-shadow: rgb(0 0 0 / 5%) 0px 2px 2px;
+
+      &:hover {
+        background-color: #f7f7f7;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__poster {
+    max-width: 40%;
+  }
+
+  &__detail {
+    padding: 10px 30px;
+
+    &--title {
+      font-size: 40px;
+      font-weight: normal;
+    }
+
+    &--head {
+      margin-top: 20px;
+      font-weight: bold;
+      line-height: 150%;
+    }
+
+    &--year {
+      margin-top: 10px;
+      font-weight: 100;
+    }
+
+    &--plot {
+      margin-top: 10px;
+      font-weight: 100;
+      line-height: 150%;
+    }
+  }
+}

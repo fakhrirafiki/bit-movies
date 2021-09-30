@@ -21,7 +21,6 @@ function useMoviesContainerState() {
 
 
     const observer = useRef();
-
     const lastMovieRef = useCallback(node => {
         if (loading) return;
         if (observer.current) observer.current.disconnect();
@@ -32,7 +31,7 @@ function useMoviesContainerState() {
             }
         });
         if (node) observer.current.observe(node);
-    }, [loading]);
+    }, [loading, currentPage, dispatch, isLastPage]);
 
     return {
         openModal,

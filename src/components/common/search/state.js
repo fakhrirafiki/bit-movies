@@ -25,6 +25,13 @@ function useSearchState() {
         }
     };
 
+    const onClickEnter = (e) => {
+        if (e.charCode === 13) {
+            dispatch(setSearchParams({ s: searchParams.s.trim() }));
+            setDisplay(false);
+        }
+    };
+
     useEffect(() => {
         if (!searchParams.s) return dispatch(setMovieLoading(false));
         dispatch(setMovieLoading(true));
@@ -52,6 +59,7 @@ function useSearchState() {
 
     useEffect(() => {
         dispatch(resetMoviesData([]));
+        setDisplay(false);
     }, [dispatch]);
 
     return {
@@ -59,7 +67,8 @@ function useSearchState() {
         updateInputByAuto,
         autoCompliteList,
         onChange,
-        display
+        display,
+        onClickEnter
     };
 }
 
