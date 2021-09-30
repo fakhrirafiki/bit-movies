@@ -20,10 +20,6 @@ export const call = (method, subUrl = '', data = {}, options) => {
         baseURL: `${process.env.REACT_APP_AUTH_URL}/?apikey=${process.env.REACT_APP_OMDB_API_KEY}`,
         method,
         url: subUrl,
-        headers: {
-            ...(options && options.headers ? options.headers : {}),
-            'Content-Type': 'application/json',
-        },
     };
 
     const payload = { ...data };

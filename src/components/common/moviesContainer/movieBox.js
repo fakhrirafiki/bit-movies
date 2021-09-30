@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const MovieBox = React.forwardRef(({ movie, onClickImage }, ref) => {
     return (
-        <div ref={ref} className="movies__pane" key={movie.imdbID}>
+        <div ref={ref} className="movies__pane" >
             <img
                 className="movies__img"
                 src={movie.Poster} alt=""
@@ -12,7 +13,9 @@ const MovieBox = React.forwardRef(({ movie, onClickImage }, ref) => {
 
             <div className="movies__detail">
                 <p className="movies__type">{movie.Type}</p>
-                <h3 className="movies__title">{movie.Title}</h3>
+                <Link to={`/${movie.imdbID}`}>
+                    <h3 className="movies__title">{movie.Title}</h3>
+                </Link>
                 <p className="movies__year">{movie.Year}</p>
             </div>
         </div>

@@ -10,7 +10,8 @@ export default function searchParams(state = initialState, action) {
         case SET_SEARCH_PARAMS:
             return {
                 ...state,
-                ...action.payload
+                ...action.payload,
+                page: 1
             };
         case SET_PAGE_PARAMS:
             return {
