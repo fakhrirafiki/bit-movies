@@ -1,0 +1,28 @@
+.movies {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(3, 320px);
+  background-color: rgba(238, 238, 238, 0.508);
+  padding: 30px;
+
+  &__pane {
+    display: flex;
+    width: 300px;
+    // height: auto;
+    // background: #000;
+    display: flex;
+    margin: 10px;
+    border: 1px solid #000;
+  }
+
+  &__img {
+    width: 100px;
+    height: 150px;
+    cursor: pointer;
+  }
+
+  &__detail {
+    margin-left: 10px;
+  }
+}
